@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="div2">
+        <form action="home.html" onsubmit="return login()">
+            <p>Login</p>
+            <i class="fa-solid fa-user"></i> 
+           <label id="in3">UserName:</label>
+           <input type="text" id="in3"><br>
+           <i class="fa-solid fa-lock"></i>
+           <label id="in4">Password:</label>
+           <input type="password" id="in4"><br>
+           <span id="s2" style="color: red;"></span><br>
+           <input type="checkbox" onclick="showPass()"> Show password
+           <input type="submit" value="login">
+          
+        </form>
+         
+      </div>
+      <script>
+        function showPass(){
+                var passInput = document.getElementById('in4');
+
+                if(passInput.type == 'password'){
+                    passInput.type= 'text';
+                }else if(passInput.type == 'text'){
+                    passInput.type = 'password';
+                }
+            }  
+                function login(){
+               var NameValue= document.getElementById('in3').value;
+               var passValue= document.getElementById('in4').value;
+               if(NameValue ==''){
+                document.getElementById('s2').innerHTML='name must be filled out';
+                return false;
+               }else if(passValue ==''){
+                document.getElementById('s2').innerHTML='password must be filled out';
+                return false;
+               }
+               for(var i=0;i<users.length;i++){
+                     if(users[i].username == NameValue && users[i].password == passValue){
+                        return true;
+                     }
+               }
+              document.getElementById('s2').innerHTML='password and username do not match';
+              return false;
+            }
+      </script>
+</body>
+</html>

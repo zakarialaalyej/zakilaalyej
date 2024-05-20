@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: black;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+header nav a {
+  margin-left: 30px;
+  font-family: 'poppins',sans-serif;
+  font-weight: bold;
+  color: white;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+header #Logo {
+  font-family: 'poppins',sans-serif;
+  font-weight: 600;
+  color: white;
+  text-decoration: none;
+  margin-left: 40px;
+}
+
+header nav a:hover {
+  color: black;
+  transition: color 1s;
+}
+div#ab.about-us p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  max-width: 800px;
+} 
+div#ab.about-us h2{
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+div#ab.about-us {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url("backgroundhome.jpg.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 20px;
+    color: black;
+}
+.shoes-title, .T-Shirt-title, .hoodies-title {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.shoes-title a, .T-Shirt-title a, .hoodies-title a {
+  text-decoration: none;
+  color: black;
+}
+
+.shoes-title a:hover, .T-Shirt-title a:hover, .hoodies-title a:hover {
+  text-decoration: underline;
+}
+
+.shoes-title p, .T-Shirt-title p, .hoodies-title p {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.Shoes-container, .T-Shirt-container, .hoodies-container {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 40px;
+}
+
+.shoe-image, .T-Shirt-image, .hoodie-image {
+  height: 200px;
+  width: 250px;
+}
+
+.shoe-image img, .T-Shirt-image img, .hoodie-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.shoe-information, .T-Shirt-information, .hoodie-information {
+  padding: 5px 0;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+footer {
+  background-color: black;
+  padding: 10px 50px;
+}
+
+.footer-up {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 10px;
+}
+
+.footer-up div {
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+
+.footer-up div p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.visit a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.Contact a{
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 5px;
+  
+}
+.Contact h2{
+  margin-bottom: 15px;
+}
+.follow i {
+  font-size: 60px;
+  color: white;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+
+.fa-brands {
+  font-size: small;
+  font-weight: 100;
+}

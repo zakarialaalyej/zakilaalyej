@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="SignUp.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+<body id="bd"> 
+    <div id="div0"> 
+        <p>SignUp</p>
+        <input type="text" id="in1" placeholder="Enter your Email"><br> 
+        <input type="password" id="in2" placeholder="Enter your Password"><br> 
+        <input type="text" id="in3" placeholder="Enter your First name"><br>
+        <input type="text" id="in4" placeholder="Enter your Second name"><br>  
+        <span id="s1" style="color: red;"></span><br> 
+        <button onclick="add()">Add user</button> 
+    </div> 
+    <script>
+        var users = [
+            { Email: 'ziko@gmail.com', password: 'zaki123456', Firstname: 'ziko', Secondname: 'bobich' }, 
+            { Email: 'zakaria@gmail.com', password: '12345abc', Firstname: 'zakaria', Secondname: 'laalyej' }
+        ]; 
+        
+        function add() {
+            var EmailValue = document.getElementById('in1').value;
+            var passValue = document.getElementById('in2').value;
+            var FirstnameValue = document.getElementById('in3').value;
+            var SecondnameValue = document.getElementById('in4').value;
+
+            if (!EmailValue.endsWith('@gmail.com')) {
+                document.getElementById('s1').innerHTML = 'Email must end with @gmail.com';
+                return false;
+            }
+
+            if (passValue.length < 8) {
+                document.getElementById('s1').innerHTML = 'Password must contain at least 8 characters';
+                return false;
+            }
+
+            if (FirstnameValue === '') {
+                document.getElementById('s1').innerHTML = 'First name must be filled out';
+                return false;
+            }
+
+            if (SecondnameValue === '') {
+                document.getElementById('s1').innerHTML = 'Second name must be filled out';
+                return false;
+            }
+
+            for (var i = 0; i < users.length; i++) {
+                if (users[i].Email === EmailValue && users[i].password === passValue && users[i].Firstname === FirstnameValue && users[i].Secondname === SecondnameValue) {
+                    document.getElementById('s1').innerHTML = 'User already exists';
+                    return false;
+                }
+            }
+
+            var user = {
+                Email: EmailValue,
+                password: passValue,
+                Firstname: FirstnameValue,
+                Secondname: SecondnameValue
+            };
+
+            users.push(user);
+            document.getElementById('s1').innerHTML = 'User added successfully';
+            console.log(users);
+            return true;
+        }
+    </script>
+</body>
+</html>
